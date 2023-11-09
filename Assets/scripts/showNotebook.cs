@@ -7,29 +7,19 @@ using UnityEngine.UI;
 public class showNotebook : MonoBehaviour
 {
     [SerializeField] private GameObject Notebook;
+    [SerializeField] private GameObject Background;
     public Collider2D[] gameColliders;
 
     void Start() {
         gameObject.GetComponent<Button>().onClick.AddListener(ShowAndHide);
         Notebook.SetActive(false);
+        Background.SetActive(false);
     }
 
     private void ShowAndHide() {
 
-        // if(gameObject.activeSelf)
-        // {
-        // Notebook.SetActive(!Notebook.activeSelf);
-        // }
-        
-        // if(gameObject.activeSelf == true) 
-        // {
-        //     DisableGameColliders();
-        // }
-        // if(gameObject.activeSelf == false) {
-        //     EnableGameColliders();
-        // }
-
         Notebook.SetActive(!Notebook.activeSelf);
+        Background.SetActive(!Background.activeSelf);
 
         if (Notebook.activeSelf)
         {
