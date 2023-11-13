@@ -10,14 +10,20 @@ public class PuzzleOneWin : MonoBehaviour
 
     public Button confirmPress;
     public Button nextPage;
+    public Button verder;
 
     public GameObject item1;
     public GameObject item2;
     public GameObject item3;
 
+    public PhaseManager phaseManager;
+    public ShowCompleteMsg showCompleteMsg;
+
     void Start()
     {
         confirmPress.onClick.AddListener(Confirmed);
+        verder.onClick.AddListener(Continue);
+
         Solved.SetActive(false);
         nextPage.gameObject.SetActive(false);
     }
@@ -42,11 +48,30 @@ public class PuzzleOneWin : MonoBehaviour
             dragit1.finished = true;
             dragit2.finished = true;
             dragit3.finished = true;
+
+            StartCoroutine(StartPhaseTwo());
         
         }
         else {
             Debug.Log("This is not right");
         }
+    }
+
+    public void Continue() 
+    {
+        showCompleteMsg.CloseMsg();
+
+
+    }
+
+    IEnumerator StartPhaseTwo()
+    {
+        yield return new WaitForSeconds(2);
+        showCompleteMsg.ShowMsg();
+        
+        phaseManager.phaseOneActive = false;
+        phaseManager.phaseTwoActive = true;
+        phaseManager.phaseInBetween = true;
     }
 
 }

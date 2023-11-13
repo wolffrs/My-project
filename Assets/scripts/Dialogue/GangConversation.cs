@@ -6,13 +6,26 @@ using DialogueEditor;
 
 public class GangConversation : MonoBehaviour
 {
-     public NPCConversation phaseOneConversation;
+    public NPCConversation phaseOneConversation;
+    public NPCConversation phaseTwoConversation;
+    public bool read = false;
+
+    public PhaseManager phaseManager;
 
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            ConversationManager.Instance.StartConversation(phaseOneConversation);
+            if (phaseManager.phaseOneActive) {
+                ConversationManager.Instance.StartConversation(phaseOneConversation);
+                read = true;
+            } 
+            if (phaseManager.phaseTwoActive && !phaseManager.phaseInBetween)  {
+                ConversationManager.Instance.StartConversation(phaseTwoConversation);
+            }
+            else {
+                Debug.Log("Go talk to the barman first");
+            }
         }
     }
 }

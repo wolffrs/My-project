@@ -5,8 +5,11 @@ using DialogueEditor;
 
 public class TestPerson : MonoBehaviour
 {
-    public NPCConversation myConversation;
+    public NPCConversation phaseOneConversation;
+    public NPCConversation phaseTwoConversation;
     public Collider2D notebookCollider;
+
+    public PhaseManager phaseManager;
 
     void Start()
     {
@@ -17,8 +20,15 @@ public class TestPerson : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) 
         {
-            ConversationManager.Instance.StartConversation(myConversation);
-            notebookCollider.enabled = true;
+            if (phaseManager.phaseOneActive) {
+                ConversationManager.Instance.StartConversation(phaseOneConversation);
+                notebookCollider.enabled = true;
+            } 
+            if (phaseManager.phaseTwoActive && phaseManager.phaseInBetween) {
+                ConversationManager.Instance.StartConversation(phaseTwoConversation);
+                Debug.Log("Starting second conversation");
+                phaseManager.phaseInBetween = false;
+            }
         }
     }
 }

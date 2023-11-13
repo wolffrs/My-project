@@ -16,7 +16,8 @@ public class ShowNotebookAndArrow : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
         {
             ObjectsEnabled();
-
+            Destroy(gameObject);
+            //play sound of notebook opening or page flipping
         }
     }
 
