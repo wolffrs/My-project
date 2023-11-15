@@ -24,7 +24,9 @@ public class DinerConversation : MonoBehaviour
             } 
             if (phaseManager.phaseTwoActive && !phaseManager.phaseInBetween) {
                 ConversationManager.Instance.StartConversation(phaseTwoConversation);
-                cluePicker.firstClue.SetText("Werkt het voor een tweede keer?");
+                cluePicker.firstClue.SetText("Diner Clue 1");
+                cluePicker.secondClue.SetText("Diner Clue 2");
+                cluePicker.thirdClue.SetText("Diner Clue 3");
             }
             else {
                 Debug.Log("Go talk to the barman first");

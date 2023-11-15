@@ -8,7 +8,9 @@ public class showNotebook : MonoBehaviour
 {
     [SerializeField] private GameObject Notebook;
     [SerializeField] private GameObject Background;
-    public Collider2D[] gameColliders;
+
+    public GameObject gameParent;
+  //  public Collider2D[] gameColliders;
 
     void Start() {
         gameObject.GetComponent<Button>().onClick.AddListener(ShowAndHide);
@@ -31,19 +33,30 @@ public class showNotebook : MonoBehaviour
         }
     }
 
-    void DisableGameColliders()
+    public void DisableGameColliders()
     {
-        foreach (Collider2D collider in gameColliders)
+        // foreach (Collider2D collider in gameColliders)
+        // {
+        //     collider.enabled = false;
+        // }
+        Debug.Log("Collider disabled");
+        foreach (var c in gameParent.GetComponentsInChildren<Collider2D>())
         {
-            collider.enabled = false;
+            c.enabled = false;
         }
     }
 
-    void EnableGameColliders()
+    public void EnableGameColliders()
     {
-        foreach (Collider2D collider in gameColliders)
+        // foreach (Collider2D collider in gameColliders)
+        // {
+        //     collider.enabled = true;
+        // }
+
+        Debug.Log("Collider enabled");
+        foreach(var c in gameParent.GetComponentsInChildren<Collider2D>())
         {
-            collider.enabled = true;
+            c.enabled = true;
         }
     }
 

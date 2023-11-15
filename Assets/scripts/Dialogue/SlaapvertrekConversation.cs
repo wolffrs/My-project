@@ -11,6 +11,7 @@ public class SlaapvertrekConversation : MonoBehaviour
     public bool read = false;
 
     public PhaseManager phaseManager;
+    public CluePicker cluePicker;
 
     private void OnMouseOver()
     {
@@ -22,10 +23,13 @@ public class SlaapvertrekConversation : MonoBehaviour
             } 
             if (phaseManager.phaseTwoActive && !phaseManager.phaseInBetween) {
                 ConversationManager.Instance.StartConversation(phaseTwoConversation);
+                cluePicker.firstClue.SetText("Slaapvertrek Clue 1");
+                cluePicker.secondClue.SetText("Slaapvertrek Clue 2");
+                cluePicker.thirdClue.SetText("Slaapvertrek Clue 3");
             }
-            else {
-                Debug.Log("Go talk to the barman first");
-            }
+            // else {
+            //     Debug.Log("Go talk to the barman first");
+            // }
         }
     }
 }

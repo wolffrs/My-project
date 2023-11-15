@@ -1065,6 +1065,7 @@ MonoBehaviour:
   phaseTwoConversation: {fileID: 1109145751}
   read: 0
   phaseManager: {fileID: 1987093752}
+  cluePicker: {fileID: 1429483391}
 --- !u!61 &164394300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3772,9 +3773,11 @@ MonoBehaviour:
   phaseOneConversation: {fileID: 1208061172}
   phaseTwoConversation: {fileID: 2061667717}
   read: 0
+  clueConvoHad: 0
   phaseManager: {fileID: 1987093752}
   cluePickManager: {fileID: 1429483396}
   cluePicker: {fileID: 1429483391}
+  shownotebook: {fileID: 568119412}
 --- !u!212 &553712215
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3919,13 +3922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Notebook: {fileID: 1738045765}
   Background: {fileID: 819204422}
-  gameColliders:
-  - {fileID: 1961709222}
-  - {fileID: 1219638415}
-  - {fileID: 884513972}
-  - {fileID: 1323104506}
-  - {fileID: 711167122}
-  - {fileID: 911620899}
+  gameParent: {fileID: 1787321502}
 --- !u!114 &568119414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6430,6 +6427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849058923}
+  - component: {fileID: 849058924}
   m_Layer: 0
   m_Name: All Dialogue
   m_TagString: Untagged
@@ -6444,16 +6442,31 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849058922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.270268, y: -1.2508436, z: -0.08164676}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -66.72973, y: -1.2508436, z: -0.08164676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1001714801}
   - {fileID: 842217089}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1787321503}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849058924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849058922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a488523767b70254d88f0b757176e4ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shownotebook: {fileID: 568119412}
+  cluePickManager: {fileID: 1429483396}
+  theNotebook: {fileID: 320976388}
 --- !u!1 &856654865
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,8 +7294,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003584119}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7293,8 +7306,8 @@ Transform:
   - {fileID: 1973182405}
   - {fileID: 185845297}
   - {fileID: 2007441424}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1787321503}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1004583406
 GameObject:
@@ -7932,7 +7945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":340.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"fase2","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"x","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":-65,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"fase2","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"x","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -7979,7 +7992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6257935, y: 12.193691}
+  m_AnchoredPosition: {x: 37, y: 15}
   m_SizeDelta: {x: 263.6987, y: 322.9948}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114002166
@@ -10229,6 +10242,7 @@ MonoBehaviour:
   phaseTwoConversation: {fileID: 346544948}
   read: 0
   phaseManager: {fileID: 1987093752}
+  cluePicker: {fileID: 1429483391}
 --- !u!61 &1390906189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10294,6 +10308,7 @@ MonoBehaviour:
   - {fileID: 1067801314}
   - {fileID: 300260894}
   notebookScript: {fileID: 1854121165}
+  shownotebook: {fileID: 568119412}
   firstClue: {fileID: 2047705349}
   secondClue: {fileID: 1268699956}
   thirdClue: {fileID: 1633980728}
@@ -12134,6 +12149,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38aeabb030b7dbe49b08f60fefac64f2, type: 3}
+--- !u!1 &1787321502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787321503}
+  m_Layer: 0
+  m_Name: InGameObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787321503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787321502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 80, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1003584120}
+  - {fileID: 2100475048}
+  - {fileID: 1903813890}
+  - {fileID: 849058923}
+  - {fileID: 1987093753}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1789709732
 GameObject:
   m_ObjectHideFlags: 0
@@ -13129,13 +13180,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1903813888}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.79, y: -0.82, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -45.21, y: -0.82, z: 0}
   m_LocalScale: {x: 0.3659514, y: 0.3659514, z: 0.3659514}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1787321503}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1961709217
 GameObject:
@@ -13458,13 +13509,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987093751}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.49397, y: 5.1937943, z: 0.021181349}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -57.506027, y: 5.1937943, z: 0.021181349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1787321503}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2003333699
 GameObject:
@@ -14803,13 +14854,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100475046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.69, y: -0.64, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -48.309998, y: -0.64, z: 0}
   m_LocalScale: {x: 0.3659514, y: 0.3659514, z: 0.3659514}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1787321503}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &2122992401 stripped
 RectTransform:

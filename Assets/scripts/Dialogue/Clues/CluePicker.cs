@@ -9,12 +9,13 @@ public class CluePicker : MonoBehaviour
     public GameObject cluePanel;
     public Button[] clueButtons;
     public NotebookScript notebookScript;
+    public showNotebook shownotebook;
 
     public TextMeshProUGUI firstClue;
     public TextMeshProUGUI secondClue;
     public TextMeshProUGUI thirdClue;
 
-    private bool panelActive;
+    private bool panelActive = false;
 
     void Start()
     {
@@ -42,12 +43,19 @@ public class CluePicker : MonoBehaviour
     {
         cluePanel.SetActive(true);
         panelActive = true;
+
+        if (panelActive == true)
+        {
+            shownotebook.DisableGameColliders();
+        }
+        
     }
 
     public void HideCluePanel()
     {
         cluePanel.SetActive(false);
         panelActive = false;
+        shownotebook.EnableGameColliders();
     }
 
     void OnClueButtonClick(int clueIndex)
@@ -63,13 +71,13 @@ public class CluePicker : MonoBehaviour
         switch (index)
         {
             case 0:
-                return "Clue 1";
+                return firstClue.text;
             case 1:
-                return "Clue 2";
+                return secondClue.text;
             case 2:
-                return "Clue 3";
+                return thirdClue.text;
             default:
-                return "Unknown Clue";
+                return "Error";
         }
     }
 }
