@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 8
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":339,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Heb
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":340.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Heb
     je de laatste ontwikkelingen gehoord? Het lijkt erop dat we hier nog wel een
-    tijdje vastzitten.\r","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Chris","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":556.5,"yPos":26},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Ja,
+    tijdje vastzitten.\r","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Chris","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":558,"yPos":26},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Ja,
     ik hoorde het. Vreselijk. Ik vraag me af wat er precies is gebeurd.\r","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Taylor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
@@ -3773,6 +3773,8 @@ MonoBehaviour:
   phaseTwoConversation: {fileID: 2061667717}
   read: 0
   phaseManager: {fileID: 1987093752}
+  cluePickManager: {fileID: 1429483396}
+  cluePicker: {fileID: 1429483391}
 --- !u!212 &553712215
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9723,10 +9725,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 9
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":339,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Weet
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":340.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Weet
     je, Liam, ik was vanmorgen vroeg opgestaan om die nieuwe yogales uit te proberen.
-    Het was echt verfrissend.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Emma\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":0}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":551.5,\"yPos\":71},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Echt?
-    Ik bedoel, wat drinken ze dan? Thee?\\r\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Liam\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":344.5,\"yPos\":152},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ja,
+    Het was echt verfrissend.\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Emma\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":0}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":553,\"yPos\":71},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Echt?
+    Ik bedoel, wat drinken ze dan? Thee?\\r\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Liam\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":346,\"yPos\":152},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ja,
     en zelfs water. Ik bedoel, wie begrijpt er nu niet het belang van cafe\xEFne
     in het leven?\\r\",\"parentUIDs\":[5],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Emma\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -10006,10 +10008,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 12
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":339,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Het
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":340.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Het
     is hier zo koud in de trein. Ik kan niet geloven dat er een moord is gepleegd
-    en we kunnen niet stoppen vanwege het weer.\r","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":551.5,"yPos":18},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Serieus?
-    Wat een nachtmerrie. Hoe is de reis tot nu toe verlopen?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Telefoon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":757.5,"yPos":24},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Nou,
+    en we kunnen niet stoppen vanwege het weer.\r","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":553,"yPos":18},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Serieus?
+    Wat een nachtmerrie. Hoe is de reis tot nu toe verlopen?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Telefoon","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":759,"yPos":24},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Nou,
     afgezien van de moord en het feit dat we vastzitten, redelijk normaal, denk ik.
     Maar ik sprak net iemand hier, en je gelooft nooit wat ze zei.\r","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Sarah","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -10292,6 +10294,9 @@ MonoBehaviour:
   - {fileID: 1067801314}
   - {fileID: 300260894}
   notebookScript: {fileID: 1854121165}
+  firstClue: {fileID: 2047705349}
+  secondClue: {fileID: 1268699956}
+  thirdClue: {fileID: 1633980728}
 --- !u!114 &1429483392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13390,19 +13395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: 51158d1120c129245883676c5bee4b9c, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NodeID: 1
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -14623,6 +14616,7 @@ MonoBehaviour:
   phaseTwoConversation: {fileID: 948767907}
   read: 0
   phaseManager: {fileID: 1987093752}
+  cluePicker: {fileID: 1429483391}
 --- !u!61 &2084004111
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15052,12 +15046,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 8
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":230.5,"yPos":117},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Oke,
-    boeie?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":450.5,"yPos":121},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Cool.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":220.5,"yPos":293},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Sorry.","parentUIDs":[4],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":443.5,"yPos":297},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Geen
-    prob.","parentUIDs":[3],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":339,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ik
-    hoop dat ie update!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Meneer","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":448.5,"yPos":194},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Dank
-    je.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Meneer","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":212.5,"yPos":197},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Piep
-    piep piep.","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Meneer","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":350.5,"yPos":376},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Piep.","parentUIDs":[5,6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Meneer","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":232,"yPos":117},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Oke,
+    boeie?","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":452,"yPos":121},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Cool.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":222,"yPos":293},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Sorry.","parentUIDs":[4],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":445,"yPos":297},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Geen
+    prob.","parentUIDs":[3],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":340.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ik
+    hoop dat ie update!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Meneer","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":450,"yPos":194},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Dank
+    je.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Meneer","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":214,"yPos":197},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Piep
+    piep piep.","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Meneer","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":352,"yPos":376},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Piep.","parentUIDs":[5,6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Meneer","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}

@@ -11,6 +11,8 @@ public class DinerConversation : MonoBehaviour
     public bool read = false;
 
     public PhaseManager phaseManager;
+    public CluePicker cluePicker;
+
 
     private void OnMouseOver()
     {
@@ -22,6 +24,7 @@ public class DinerConversation : MonoBehaviour
             } 
             if (phaseManager.phaseTwoActive && !phaseManager.phaseInBetween) {
                 ConversationManager.Instance.StartConversation(phaseTwoConversation);
+                cluePicker.firstClue.SetText("Werkt het voor een tweede keer?");
             }
             else {
                 Debug.Log("Go talk to the barman first");

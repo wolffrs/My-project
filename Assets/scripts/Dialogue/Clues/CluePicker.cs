@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CluePicker : MonoBehaviour
 {
     public GameObject cluePanel;
     public Button[] clueButtons;
     public NotebookScript notebookScript;
+
+    public TextMeshProUGUI firstClue;
+    public TextMeshProUGUI secondClue;
+    public TextMeshProUGUI thirdClue;
 
     private bool panelActive;
 
@@ -49,7 +54,7 @@ public class CluePicker : MonoBehaviour
     {
         string selectedClue = GetClueFromIndex(clueIndex);
         notebookScript.AddClue(selectedClue);
-        //HideCluePanel();
+        HideCluePanel();
     }
 
     string GetClueFromIndex(int index)
