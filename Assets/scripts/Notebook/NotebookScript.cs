@@ -6,11 +6,25 @@ using TMPro;
 
 public class NotebookScript : MonoBehaviour
 {
-    public TextMeshProUGUI clueText; // Reference to the Text component displaying clues
+    public TextMeshProUGUI clueTextLounge;
+    public TextMeshProUGUI clueTextDiner;
+    public TextMeshProUGUI clueTextGang;
+    public TextMeshProUGUI clueTextSlaap;
 
-    public void AddClue(string clue)
+    public void AddClueToText(string clue, TextMeshProUGUI targetClueText)
     {
-        // Append the new clue to the existing text
-        clueText.text += "\n" + clue;
+        targetClueText.text = clue;
     }
+
+    public string GetClueFromText(TextMeshProUGUI clueText)
+    {
+        return clueText.text;
+    }
+
+    public bool IsClueSelected(TextMeshProUGUI clueText)
+    {
+        // Check if the given clue text is not empty
+        return !string.IsNullOrEmpty(clueText.text);
+    }
+
 }

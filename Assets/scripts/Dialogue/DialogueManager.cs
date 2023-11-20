@@ -6,9 +6,7 @@ using DialogueEditor;
 
 public class DialogueManager : MonoBehaviour
 {
-        public showNotebook shownotebook;
-        public CluePickManager cluePickManager;
-        public Collider2D theNotebook;
+        public ColliderManager colliderManager;
 
         private void OnEnable()
         {
@@ -24,20 +22,18 @@ public class DialogueManager : MonoBehaviour
 
         private void ConversationStart()
         {
-            Debug.Log("A conversation has began.");
-            shownotebook.DisableGameColliders();
-            theNotebook.enabled = false;
+            Debug.Log("A conversation has begun. Disabling Colliders");
+            colliderManager.DisableGameColliders();
         }
 
         private void ConversationEnd()
         {
-            Debug.Log("A conversation has ended.");
-            shownotebook.EnableGameColliders();
-            theNotebook.enabled = true;
+            Debug.Log("A conversation has ended. Enabling Colliders");
+            colliderManager.EnableGameColliders(); 
 
-            // if (clueConvoHad == true) 
+            // if (ConversationManager.Instance.CurrentConversation) 
             // {
-                cluePickManager.ShowPanel();
-            //}
+            //     cluePicker.ShowCluePanel();
+            // }
         }
     }

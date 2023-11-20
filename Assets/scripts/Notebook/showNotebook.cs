@@ -9,11 +9,14 @@ public class showNotebook : MonoBehaviour
     [SerializeField] private GameObject Notebook;
     [SerializeField] private GameObject Background;
 
+    public ColliderManager colliderManager;
+
     public GameObject gameParent;
   //  public Collider2D[] gameColliders;
 
     void Start() {
         gameObject.GetComponent<Button>().onClick.AddListener(ShowAndHide);
+        
         Notebook.SetActive(false);
         Background.SetActive(false);
     }
@@ -25,39 +28,41 @@ public class showNotebook : MonoBehaviour
 
         if (Notebook.activeSelf)
         {
-            DisableGameColliders();
+            colliderManager.DisableGameColliders();
+            Debug.Log("Notebook is open, disabling colliders");
         }
         else
         {
-            EnableGameColliders();
+            colliderManager.EnableGameColliders();
+            Debug.Log("Notebook is closed, enabling colliders");
         }
     }
 
-    public void DisableGameColliders()
-    {
-        // foreach (Collider2D collider in gameColliders)
-        // {
-        //     collider.enabled = false;
-        // }
-        Debug.Log("Collider disabled");
-        foreach (var c in gameParent.GetComponentsInChildren<Collider2D>())
-        {
-            c.enabled = false;
-        }
-    }
+    // public void DisableGameColliders()
+    // {
+    //     // foreach (Collider2D collider in gameColliders)
+    //     // {
+    //     //     collider.enabled = false;
+    //     // }
+    //     Debug.Log("Collider disabled");
+    //     foreach (var c in gameParent.GetComponentsInChildren<Collider2D>())
+    //     {
+    //         c.enabled = false;
+    //     }
+    // }
 
-    public void EnableGameColliders()
-    {
-        // foreach (Collider2D collider in gameColliders)
-        // {
-        //     collider.enabled = true;
-        // }
+    // public void EnableGameColliders()
+    // {
+    //     // foreach (Collider2D collider in gameColliders)
+    //     // {
+    //     //     collider.enabled = true;
+    //     // }
 
-        Debug.Log("Collider enabled");
-        foreach(var c in gameParent.GetComponentsInChildren<Collider2D>())
-        {
-            c.enabled = true;
-        }
-    }
+    //     Debug.Log("Collider enabled");
+    //     foreach(var c in gameParent.GetComponentsInChildren<Collider2D>())
+    //     {
+    //         c.enabled = true;
+    //     }
+    // }
 
 }

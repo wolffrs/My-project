@@ -66,7 +66,7 @@ public class PuzzleOneWin : MonoBehaviour
 
     IEnumerator StartPhaseTwo()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         showCompleteMsg.ShowMsg();
         
         phaseManager.phaseOneActive = false;

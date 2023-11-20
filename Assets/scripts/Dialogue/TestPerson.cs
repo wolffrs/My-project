@@ -22,7 +22,7 @@ public class TestPerson : MonoBehaviour
         {
             if (phaseManager.phaseOneActive) {
                 ConversationManager.Instance.StartConversation(phaseOneConversation);
-                notebookCollider.enabled = true;
+                //notebookCollider.enabled = true;
             } 
             if (phaseManager.phaseTwoActive && phaseManager.phaseInBetween) {
                 ConversationManager.Instance.StartConversation(phaseTwoConversation);

@@ -16,14 +16,14 @@ public class LoungeConversation : MonoBehaviour
 
     public PhaseManager phaseManager;
     public CluePickManager cluePickManager;
-    public CluePicker cluePicker;
+    // public CluePicker cluePicker;
 
     public showNotebook shownotebook;
 
     void Start()
     {
         //cluePicker.firstClue.SetText("Werkt het?");
-        Debug.Log("Starting Lounge Conversation");
+       
     }
 
 
@@ -49,9 +49,9 @@ public class LoungeConversation : MonoBehaviour
             } 
             if (phaseManager.phaseTwoActive && !phaseManager.phaseInBetween) {
                 ConversationManager.Instance.StartConversation(phaseTwoConversation);
-                cluePicker.firstClue.SetText("Lounge Clue 1");
-                cluePicker.secondClue.SetText("Lounge Clue 2");
-                cluePicker.thirdClue.SetText("Lounge Clue 3");
+                // cluePicker.firstClue.SetText("Lounge Clue 1");
+                // cluePicker.secondClue.SetText("Lounge Clue 2");
+                // cluePicker.thirdClue.SetText("Lounge Clue 3");
 
                 clueConvoHad = true;
 

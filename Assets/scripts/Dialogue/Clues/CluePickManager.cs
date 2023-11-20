@@ -8,23 +8,17 @@ using DialogueEditor;
 public class CluePickManager : MonoBehaviour
 {
 
-    public CluePicker cluePicker;
+    // public CluePicker cluePicker;
 
-    void Start()
-    {
-       HidePanel();
-        
-    }
+    // public void ShowPanel()
+    // {
+    //     cluePicker.ShowCluePanel();
+    // }
 
-    public void ShowPanel()
-    {
-        cluePicker.ShowCluePanel();
-    }
-
-    public void HidePanel()
-    {
-        cluePicker.HideCluePanel();
-    }
+    // public void HidePanel()
+    // {
+    //     cluePicker.HideCluePanel();
+    // }
 
 
 

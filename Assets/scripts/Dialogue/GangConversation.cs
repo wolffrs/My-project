@@ -11,7 +11,7 @@ public class GangConversation : MonoBehaviour
     public bool read = false;
 
     public PhaseManager phaseManager;
-    public CluePicker cluePicker;
+    // public CluePicker cluePicker;
 
     private void OnMouseOver()
     {
@@ -23,9 +23,9 @@ public class GangConversation : MonoBehaviour
             } 
             if (phaseManager.phaseTwoActive && !phaseManager.phaseInBetween)  {
                 ConversationManager.Instance.StartConversation(phaseTwoConversation);
-                cluePicker.firstClue.SetText("Gang Clue 1");
-                cluePicker.secondClue.SetText("Gang Clue 2");
-                cluePicker.thirdClue.SetText("Gang Clue 3");
+                // cluePicker.firstClue.SetText("Gang Clue 1");
+                // cluePicker.secondClue.SetText("Gang Clue 2");
+                // cluePicker.thirdClue.SetText("Gang Clue 3");
             }
             else {
                 Debug.Log("Go talk to the barman first");
