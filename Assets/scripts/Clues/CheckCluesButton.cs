@@ -12,6 +12,8 @@ public class CheckCluesButton : MonoBehaviour
     public Button goPageThree;
     public Button giveTip;
     public Button clueCheck;
+
+    private float littleWait = 0.3f;
     
     void Start() 
     {
@@ -29,7 +31,7 @@ public class CheckCluesButton : MonoBehaviour
         string slaapClue = notebookScript.GetClueFromText(notebookScript.clueTextSlaap);
 
         // Check if the clues are correct
-        if (loungeClue == "Correct Lounge" && dinerClue == "Correct Diner" && gangClue == "Correct Gang" && slaapClue == "Correct Slaap")
+        if (loungeClue == "Dominik. De journalist. Altijd aan het schrijven in zijn notitieboekje. Volgens mij is hij het met ons eens over hoeden." && dinerClue == "Mes. Ik zag een bebloede mes in de keuken toen ik koffiebonen ging halen. Maar dat hoort, toch?" && gangClue == "Ik hoorde vanochtend ruzie. Misschien hadden het slachtoffer en de dader een mening verschil?" && slaapClue == "Sarah, de hondenfan. We waren aan het kaarten, en rond de tijd van de moord ging ze plassen, maar ze was láng weg.")
         {
             Debug.Log("All clues are correct!");
             goPageThree.gameObject.SetActive(true);
@@ -68,7 +70,7 @@ public class CheckCluesButton : MonoBehaviour
     IEnumerator StartPhaseThree()
     {
         Debug.Log("Starting Phase Thjree");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(littleWait);
         showCompleteMsg.ShowMsgTwo();
         
     }

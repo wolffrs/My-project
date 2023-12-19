@@ -10,6 +10,7 @@ public class TestPerson : MonoBehaviour
     public Collider2D notebookCollider;
 
     public PhaseManager phaseManager;
+    public AudioSource telephoneRing;
 
     void Start()
     {
@@ -17,16 +18,21 @@ public class TestPerson : MonoBehaviour
     }
 
     private void OnMouseOver()
-    {
+    { 
         if (Input.GetMouseButtonDown(0)) 
         {
+
             if (phaseManager.phaseOneActive) {
                 ConversationManager.Instance.StartConversation(phaseOneConversation);
+                telephoneRing.Stop();
                 //notebookCollider.enabled = true;
+                
+                
             } 
             if (phaseManager.phaseTwoActive && phaseManager.phaseInBetween) {
                 ConversationManager.Instance.StartConversation(phaseTwoConversation);
                 Debug.Log("Starting second conversation");
+                telephoneRing.Stop();
                 phaseManager.phaseInBetween = false;
             }
         }

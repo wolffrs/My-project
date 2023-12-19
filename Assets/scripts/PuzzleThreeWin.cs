@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PuzzleOneWin : MonoBehaviour
+public class PuzzleThreeWin : MonoBehaviour
 {
 
     [SerializeField] private GameObject Solved;
 
     public Button confirmPress;
-    public Button nextPage;
     public Button verder;
 
     public GameObject item1;
@@ -23,10 +22,8 @@ public class PuzzleOneWin : MonoBehaviour
     void Start()
     {
         confirmPress.onClick.AddListener(Confirmed);
-        verder.onClick.AddListener(Continue);
 
         Solved.SetActive(false);
-        nextPage.gameObject.SetActive(false);
     }
 
 
@@ -44,13 +41,12 @@ public class PuzzleOneWin : MonoBehaviour
             Solved.SetActive(true);
 
             confirmPress.gameObject.SetActive(false);
-            nextPage.gameObject.SetActive(true);
 
             dragit1.finished = true;
             dragit2.finished = true;
             dragit3.finished = true;
 
-            StartCoroutine(StartPhaseTwo());
+            StartCoroutine(RestartGame());
         
         }
         else {
@@ -58,21 +54,11 @@ public class PuzzleOneWin : MonoBehaviour
         }
     }
 
-    public void Continue() 
-    {
-        showCompleteMsg.CloseMsg();
-
-
-    }
-
-    IEnumerator StartPhaseTwo()
+    IEnumerator RestartGame()
     {
         yield return new WaitForSeconds(waitLittle);
-        showCompleteMsg.ShowMsg();
-
-        phaseManager.phaseOneActive = false;
-        phaseManager.phaseTwoActive = true;
-        phaseManager.phaseInBetween = true;
+        showCompleteMsg.ShowMsgThree();
+    
     }
 
 }

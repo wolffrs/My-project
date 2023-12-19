@@ -14,7 +14,7 @@ public class dialoguePhase1Manager : MonoBehaviour
 
     void Start()
     {
-      //  confirm.gameObject.SetActive(false);
+    //   confirm.gameObject.SetActive(false);
     }
 
     void Update()
