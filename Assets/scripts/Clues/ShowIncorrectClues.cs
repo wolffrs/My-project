@@ -38,17 +38,17 @@ public class ShowIncorrectClues : MonoBehaviour
 
         if (notebookScript.GetClueFromText(notebookScript.clueTextDiner) != correctClueDiner)
         {
-            incorrectClues += "Diner: " + notebookScript.GetClueFromText(notebookScript.clueTextDiner) + "\n";
+            incorrectClues += "De gekozen clue in de diner is niet juist.";
         }
 
         if (notebookScript.GetClueFromText(notebookScript.clueTextGang) != correctClueGang)
         {
-            incorrectClues += "Gang: " + notebookScript.GetClueFromText(notebookScript.clueTextGang) + "\n";
+            incorrectClues += "De gekozen clue in de gang is niet juist.";
         }
 
         if (notebookScript.GetClueFromText(notebookScript.clueTextSlaap) != correctClueSlaap)
         {
-            incorrectClues += "Slaap: " + notebookScript.GetClueFromText(notebookScript.clueTextSlaap) + "\n";
+            incorrectClues += "De gekozen clue in het slaapvertrek is niet juist.";
         }
 
         return incorrectClues;
